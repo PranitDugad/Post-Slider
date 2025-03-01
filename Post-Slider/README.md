@@ -15,7 +15,7 @@ Note -  JSON struture should be same as give API file to fetch from other urls.
 - Caching mechanism for optimized performance.
 
 ## Installation
-1. Upload the plugin folder "Post Slider" to the `/wp-content/plugins/` directory 
+1. Upload the plugin folder("Post-slider") to the `/wp-content/plugins/` directory Or download zip file (Post-slider.zip) and upload via upload a plugin from plugins in wp dashboard.
 2. Activate the plugin through the **Plugins** menu in WordPress.
 3. Insert the block in the Gutenberg editor by searching for **Post Slider**.
 
