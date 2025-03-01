@@ -2,8 +2,11 @@
 
 ## Description
 The **Post Slider** is a custom Gutenberg block that displays a slideshow of posts from an external REST API source. This block allows users to configure options like auto-scroll, looping, dots navigation, and displaying post dates.
-Note for Reviewer -  1. JSON struture should be same as give API file to fetch from other urls.
-        2. Kept design minimal for now if need to add more design let me khow 
+
+
+## Note for Reviewer -  
+1. JSON struture should be same as give API file to fetch from other urls.
+2. Kept design minimal for now if need to add more design let me khow 
 
 ## Features
 - Fetches posts dynamically from a JSON API.
