@@ -7,6 +7,8 @@ Note -  JSON struture should be same as give API file to fetch from other urls.
 ## Features
 - Fetches posts dynamically from a JSON API.
 - Displays a slider with images, titles, and optional dates.
+- Support keyboard navigation
+- In mobile , use can swipe with a thumb to move between the next and previous slides.
 - Customizable options:
   - Auto-scroll
   - Infinite loop
