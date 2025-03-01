@@ -1,36 +1,25 @@
 // src/index.js
 import { registerBlockType } from '@wordpress/blocks';
-import { TextControl } from '@wordpress/components';
-import ServerSideRender from '@wordpress/server-side-render';
-import { useEffect, useState } from '@wordpress/element';
+import Edit from './edit'
+import Save from './save'
 
 registerBlockType('my-plugin/post-slider', {
     title: 'Post Slider',
-    icon: 'slides',
-    category: 'widgets',
+    icon: (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="4" fill="#4A90E2"/>
+            <path d="M5 12L9 8V16L5 12Z" fill="white"/>
+            <path d="M15 8L19 12L15 16V8Z" fill="white"/>
+        </svg>
+    ),
+    category: 'made-by-pranit-dugad',
     attributes: {
-        url: {
-            type: 'string',
-            default: 'https://wptavern.com/wp-json/wp/v2/posts',
-        },
+        url: { type: 'string', default: 'https://wptavern.com/wp-json/wp/v2/posts' },
+        autoScroll: { type: 'boolean', default: true },
+        loop: { type: 'boolean', default: true },
+        showDots: { type: 'boolean', default: true },
+        showDate: { type: 'boolean', default: true },
     },
-    edit: ({ attributes, setAttributes }) => {
-        const { url } = attributes;
-        return (
-            <div>
-                <TextControl
-                    label="Posts URL"
-                    value={url}
-                    onChange={(newUrl) => setAttributes({ url: newUrl })}
-                />
-                <ServerSideRender
-                    block="my-plugin/post-slider"
-                    attributes={{ url }}
-                />
-            </div>
-        );
-    },
-    save: () => {
-        return null; // Use server-side rendering.
-    },
+    edit: Edit,
+    save: Save, // Server-side rendering
 });
